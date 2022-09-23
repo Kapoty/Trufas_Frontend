@@ -1,0 +1,75 @@
+// 1. Your custom variables and variable overwrites.
+$global-primary-background: #513027;
+//$global-muted-background: #513027;
+
+// 2. Import default variables and available mixins.
+@import "uikit/scss/variables-theme.scss";
+@import "uikit/scss/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+@mixin hook-card() { color: #000; }
+
+// 4. Import UIkit.
+@import "uikit/scss/uikit-theme.scss";
+
+$primary-color: #333;
+$spacing: 20px;
+$font-stack: "Roboto", Helvetica, sans-serif;
+
+body {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 60px;
+	background-color: #ffffff;
+}
+
+.loading {
+	display: flex;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.8;
+	flex-direction: column;
+	gap: 10px;
+	z-index: 10000;
+}
+
+.chocolate {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 40px;
+	background-image: url("/assets/image/chocolate.png");
+	z-index: 9999;
+}
+
+.uk-navbar-container {
+	background-color: #513027;
+}
+
+.modalBlack {
+	z-index: 10000;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.75);
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+
+.modalWhite {
+	background-color: white;
+}
+
+select {
+	width: 226px;
+	height: 40px;
+}
